@@ -62,6 +62,25 @@ void check_sign(int n)
         cout<<"Enter the valid number\n";
     }
 }
+void palindrome(int n)
+{
+    int r,sum,temp;
+    temp=n;
+    while(n!=0)
+    {
+        r=n%10;
+        sum=sum*10+r;
+        n=n/10;
+    }
+    if(sum==temp)
+    {
+        cout<<"It is a palindrome number";
+    }
+    else
+    {
+        cout<<"Tt is not a palindrome";
+    }
+}
 int main() 
 {
     system("cls");
@@ -73,4 +92,5 @@ int main()
     check_sign(n);
     check_sign(n);
     SieveOfEratosthenes(n);
+    palindrome(n);
 }
