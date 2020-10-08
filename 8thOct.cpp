@@ -81,6 +81,17 @@ void palindrome(int n)
         cout<<"Tt is not a palindrome";
     }
 }
+void reverse_number(int n)
+{
+    int r,sum,temp;
+    temp=n;
+    while(n!=0)
+    {
+        r=n%10;
+        sum=sum*10+r;
+        n=n/10;
+    }
+    cout<<sum;
 int main() 
 {
     system("cls");
@@ -93,4 +104,5 @@ int main()
     check_sign(n);
     SieveOfEratosthenes(n);
     palindrome(n);
+    reverse_number(n);
 }
